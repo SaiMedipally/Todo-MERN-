@@ -27,7 +27,7 @@ function Home() {
     const fetchTodos = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5500/api/todos', {
+            const response = await fetch('https://todo-backend-033z.onrender.com/api/todos', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -60,7 +60,7 @@ function Home() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5500/api/todos', {
+            const response = await fetch('https://todo-backend-033z.onrender.com/api/todos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ function Home() {
     const deleteTodo = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/todos/${id}`, {
+            const response = await fetch(`https://todo-backend-033z.onrender.com/api/todos/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -118,7 +118,7 @@ function Home() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/todos/${id}`, {
+            const response = await fetch(`https://todo-backend-033z.onrender.com/api/todos/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ function Home() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/todos/${todoId}/add`, {
+            const response = await fetch(`https://todo-backend-033z.onrender.com/api/todos/${todoId}/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ function Home() {
     const toggleItemDone = async (todoId, itemId, currentDone) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/todos/${todoId}/items/${itemId}`, {
+            const response = await fetch(`https://todo-backend-033z.onrender.com/api/todos/${todoId}/items/${itemId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -197,7 +197,7 @@ function Home() {
     const deleteItem = async (todoId, itemId) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5500/api/todos/${todoId}/items/${itemId}`, {
+            const response = await fetch(`https://todo-backend-033z.onrender.com/api/todos/${todoId}/items/${itemId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
